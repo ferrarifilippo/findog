@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Signup{% endblock %}
+{% block title %}Crea un nuovo account{% endblock %}
+{% block content %}
+
+
+<div class="container d-flex justify-content-center align-items-center">
+    <form method="POST" action="/signup">
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="row mb-3 alert-danger">
+            <h5 class="text-center">
+                {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+            </h5>
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="name" placeholder="Nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="surname" placeholder="Cognome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="address" placeholder="Indirizzo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="email" name="email" placeholder="E-mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="password" name="psw" placeholder="Password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="numb" placeholder="Telefono" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <div class="d-grid gap">
+                    <button type="submit" class="btn btn-primary login" onclick="myfunction">Registrati</button>
+                </div>
+            </div>
+        </div>
+
+    <div class="row m-3">
+        <div class="col text-center">
+            <p style="margin-bottom: 0px;">Hai un account? <a href="login" class="pe-auto text-decoration-none">Log in</a></p>
+        </div>
+    </div>
+    </form>
+</div>
+
+{% endblock %}

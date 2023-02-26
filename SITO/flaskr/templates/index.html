@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Findog{% endblock %}
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<form>
+    <div class="container text-center">
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <h1>Welcome to FinDog!</h1>
+            </div>
+        </div>
+
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <p class="from-text">Registration <a href="signup" class="pe-auto text-decoration-none font-weight-bold">Sign up</a></p>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <p class="from-text">Login <a href="login" class="pe-auto text-decoration-none font-weight-bold">Log in</a></p>
+            </div>
+        </div>
+</form>
+
+
+{% endblock %}

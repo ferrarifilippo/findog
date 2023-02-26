@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block head_title %}New dog{% endblock %}
+{% block title %}Aggiungi un nuovo cane{% endblock %}
+
+{% block content %}
+
+<div class="square-box container d-flex justify-content-center align-items-center ">
+
+<form method="POST" action="/new_dog">
+        
+       {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="row mb-3 alert-danger">
+                <h5 class="text-center">
+                {{ messages[0] }}. Vai al tuo <a href="{{ url_for('profile') }}">profilo</a>.
+                    </h5>
+            </div>
+        {% endif %}
+        {% endwith %}
+            <div class="row mb-3">
+                <h1 class="display-5 text-center">Findog</h1>
+            </div>
+
+     <div class="row mb-3">
+                <!--
+                <div class="col">
+                    <input type="text" name="uuid" placeholder="UUID del cane" class="form-control" aria-describedby="emailHelp"></input>
+                </div>
+            </div>
+            -->
+
+            <div class="row mb-3 text-center">
+                <div class="col">
+                    <input type="text" name="name" placeholder="Nome" class="form-control text-center" aria-describedby="emailHelp"></input>
+                </div>
+            </div>
+        
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="text" name="breed" placeholder="Razza" class="form-control text-center" aria-describedby="emailHelp"></input>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="text" name="color" placeholder="Colore" class="form-control text-center" aria-describedby="emailHelp"></input>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col text-center">
+                    <div class="d-grid gap">
+                        <button type="submit" class="btn btn-primary">Aggiungi</button>
+                    </div>   
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

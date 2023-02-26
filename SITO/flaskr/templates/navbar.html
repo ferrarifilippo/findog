@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+
+        <a class="navbar-brand" href="/">FINDOG</a>
+        <button id="link" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {% if current_user.is_authenticated %}
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a id="link1" class="nav-link" href="/newdog">Aggiungi cane <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="link2" class="nav-link" href="/doglist">Lista cani</a>
+                </li>
+                <li class="nav-item">
+                    <a id="link3" class="nav-link" href="/profile">Profilo</a>
+                </li>
+
+
+
+            </ul>
+
+            <div class="col d-flex justify-content-end">
+
+                <span id="link" class="nav-link"> {{current_user.name()}}</span> <a id="link" class="nav-link" href="/logout">Logout</a>
+                    {%else%}
+                    <a id="link" class="nav-link" href="/login">Login</a>
+
+            </div>
+        </div>
+
+        {% endif %}
+</nav>

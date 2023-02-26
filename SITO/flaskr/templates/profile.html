@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Profile{% endblock %}
+{% block title %}Il mio profilo{% endblock %}
+
+{% block content %}
+<form>
+    <div class="container">
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert-danger">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/mydog.png') }}" class="card-img-top" alt="..." >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">I tuoi cani</h5>
+                        <p class="card-text">Clicca qui per visualizzare la lista dei tuoi cani</p>
+                        <a href="/doglist" class="btn btn-primary">Vai</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/newdog.png') }}" class="card-img-top" alt="...">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Aggiungi un nuovo cane</h5>
+                        <p class="card-text">Clicca qui per aggiungere un nuovo cane</p>
+                        <a href="/new_dog" class="btn btn-primary">Aggiungi</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+</form>
+
+
+{% endblock %}

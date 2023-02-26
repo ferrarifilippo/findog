@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Login{% endblock %}
+{% block title %}Benvenuto in FinDog! {% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center">
+    <form method="POST" action="/login">
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert-danger">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+
+                <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Inserisci un indirizzo email valido</div>
+
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="psw" class="form-control" id="exampleInputPassword1">
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary login" onclick="myfunction()">Login</button>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <p class="from-text">Non hai un account? <a href="signup" class="pe-auto text-decoration-none font-weight-bold">Registrati</a></p>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

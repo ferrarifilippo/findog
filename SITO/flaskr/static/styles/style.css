@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.square-box {
+  max-width: 350px;
+  min-height: 400px;
+  margin-top: 50px;
+  border: 1px solid rgb(219,219,219);
+  background-color: #ffffff;
+  padding: 25px;
+}
+
+.login-body {
+  background-color: rgb(250,250,250);
+}
+
+.login-form {
+  border: 1px solid rgb(219,219,219);
+  padding: 25px;
+  background-color: #ffffff;
+  width: 350px;
+}
+
+.login-p {
+  background-color: #ffffff;
+  border: 1px solid rgb(219,219,219);
+  height: 70px;
+  width: 350px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .square-box {
+      border: none;
+      background-color: rgb(250,250,250);
+  }
+
+  .login-p {
+      border: none;
+      background-color: rgb(250,250,250);
+  }
+}
+
+
+
+
+.container-fluid{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+.navbar{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+}
+
+.checked {
+  color: orange;
+  cursor : pointer
+}
+
+.review {
+  color: orange;
+}
+
+.font-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:700;
+}
+
+.font-medium {
+  font-size: 25px;
+}
+
+.font-small {
+  font-size: 15px;
+}
+
+.font-large {
+  font-size: 35px;
+}
+
+.likin {
+  font-size:15px;
+  cursor : pointer;
+}
+
+.liked{
+  color:blue;
+}
+
+.toggler span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.toggler span:after {
+
+  content: '\1f869 \1f86b';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: +20px;
+  transition: 0.5s;
+}
+ .toggler:hover span {
+  padding-left: 25px;
+}
+
+.toggler:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+body, html {
+  height: 100%;
+}
+
+.bg-home {
+  /* The image used */
+  /* background-image: url("/static/img/bg_home.jpg"); */
+
+  /* Full height */
+  height: max-content;
+
+  /* Center and scale the image nicely */
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+

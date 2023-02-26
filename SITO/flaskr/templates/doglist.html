@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block head_title %}
+Dog list
+
+{% endblock %}
+{% block title %}
+I tuoi cani
+{% endblock %}
+{% block content %}
+<div class="container justify-content-center p-5 ">
+
+    {%  if object_list %}
+    {% for dog in object_list %}
+    <div class="row">
+        <div class="col rounded shadow p-4-lg m-3-lg mb-2 bg-white w-auto">
+            <div class="rounded w-100 m-1 p-1">
+                <div class="text-center">
+                    <div class="p-2-lg m-1 py-2">
+                        <h2 class="font-bold font-medium">{{ dog.name }}</h2>
+                    </div>
+
+                    <div class="p-2-lg py-2 m-1">
+                        <h2 class="font-small">Colore : {{ dog.color}}</h2>
+                    </div>
+
+                    <div class="p-2-lg py-2 m-1">
+                        <h2 class="font-small">Razza : {{ dog.breed }}</h2>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endif %}
+</div>
+{% endblock %}
