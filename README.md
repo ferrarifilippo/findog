@@ -1,2 +1,2 @@
 # FINDog
-Collare intelligente per trovare cani scappati.
+Smart collar to find escaped dogs.
