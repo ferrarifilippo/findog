@@ -3,6 +3,6 @@
 
 <p>This work attempts to create a smart collar to find escaped dogs.</p>
 
-<p></p>
+<p>Several technologies have been used including: BLE devices</p>
 
 
